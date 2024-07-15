@@ -32,8 +32,12 @@ dependencies {
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 
+	//redis
 	implementation 'org.springframework.boot:spring-boot-starter-data-redis'
 	implementation 'io.lettuce:lettuce-core'
+
+	//vector
+	implementation 'org.apache.commons:commons-math3:4.6.12'
 }
 
 tasks.named('test') {
