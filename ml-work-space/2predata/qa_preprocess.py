@@ -56,11 +56,11 @@ def create_dataframe(qa_data, legal_data):
     return pd.DataFrame(rows)
 
 # 데이터 전처리 파이프라인 실행
-legalqa_data = load_data('C:/Users/bit/Ideaproject/ml-work-space/1rawdata/legalqa.jsonlines')  # 절대 경로로 수정
-with open('C:/Users/bit/Ideaproject/ml-work-space/1rawdata/생활법령.json', 'r', encoding='utf-8') as f:  # 절대 경로로 수정
+legalqa_data = load_data('C:/Users/bit/Ideaproject/individual-ml-lawmate/ml-work-space/1rawdata/legalqa.jsonlines')  # 절대 경로로 수정
+with open('C:/Users/bit/Ideaproject/ml-work-space/individual-ml-lawmate/1rawdata/생활법령.json', 'r', encoding='utf-8') as f:  # 절대 경로로 수정
     생활법령_data = json.load(f)
 
 df = create_dataframe(legalqa_data, 생활법령_data)
 print(df.head())
 
-df.to_csv('C:/Users/bit/Ideaproject/ml-work-space/2predata/combined_preprocessed_data.csv', index=False, encoding='utf-8-sig')  # 절대 경로로 수정
+df.to_csv('C:/Users/bit/Ideaproject/individual-ml-lawmate/ml-work-space/2predata/combined_preprocessed_data.csv', index=False, encoding='utf-8-sig')  # 절대 경로로 수정
